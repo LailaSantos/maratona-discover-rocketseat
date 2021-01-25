@@ -1,0 +1,151 @@
+<!DOCTYPE>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<title>dev.finance$</title>
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="logo">dev.finance$</h1>
+		<!-- <img src="./assets/logo.svg" alt="Logo Dev Finance"> -->
+	</header>
+
+	<main class="container">
+		<section class="balance">
+			<h2 class="sr-only">Balanço</h2>
+
+			<div class="card">
+				<h3>
+					<span>Entradas</span>
+					<i class="material-icons entrada">add_circle_outline</i>
+				</h3>
+				<p>R$ 5.000,00</p>
+			</div>
+
+			<div class="card">
+				<h3>
+					<span>Saídas</span>
+					<i class="material-icons saida">highlight_off</i>
+				</h3>
+				<p>R$ 2.000,00</p>
+			</div>
+
+			<div class="card total">
+				<h3>
+					<span>Total</span>
+					<i class="material-icons total">check_circle</i>
+				</h3>
+				<p>R$ 3.000,00</p>
+			</div>
+		</section>
+
+		<section class="transaction">
+			<h2 class="sr-only">Transações</h2>
+
+			<a href="#" onclick="Modal.open()" class="button new">
+				+ Nova Transação
+			</a>
+
+			<table class="data-table">
+				<thead>
+					<tr>
+						<th>Descrição</th>
+						<th>Valor</th>
+						<th colspan="2">Data</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Luz</td>
+						<td class="expense">- R$ 500,00</td>
+						<td>23/01/2021</td>
+						<td>
+							<i class="material-icons saida">remove_circle_outline</i>
+						</td>
+					</tr>
+					<tr>
+						<td>Criação website</td>
+						<td class="income">R$ 5.000,00</td>
+						<td>23/01/2021</td>
+						<td>
+							<i class="material-icons saida">remove_circle_outline</i>
+						</td>
+					</tr>
+					<tr>
+						<td>Internet</td>
+						<td class="expense">- R$ 200,00</td>
+						<td>23/01/2021</td>
+						<td>
+							<i class="material-icons saida">remove_circle_outline</i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<div class="modal-overlay">
+		<div class="modal">
+			<div class="form">
+				<h2>Nova Transação</h2>
+				<form action="">
+					<div class="input-group">
+						<label for="description" class="sr-only">Descrição</label>
+						<input
+          type="text"
+          id="description"
+          name="description"
+          placeholder="Descrição"
+          >
+        </div>
+
+						<div class="input-group">
+							<label for="amount" class="sr-only">Valor</label>
+							<input
+          type="number"
+          step="0.01"
+          id="amount"
+          name="amount"
+          placeholder="0,00"
+          >
+							<small class="help">
+            Use o sinal - (negativo) para despesas e, (vírgula) para casas decimais. 
+          </small>
+						</div>
+
+						<div class="input-group">
+							<label for="date" class="sr-only">Data</label>
+							<input
+          type="date"
+          id="date"
+          name="date"
+          >
+        </div>
+
+							<div class="input-group actions">
+								<a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
+								<button>
+              Salvar
+            </button>
+							</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<p>Copyright&copy;2021-dev.finance$-LailaRoberta</p>
+	</footer>
+	<script src="./script.js"></script>
+</body>
+
+</html>
